@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Guess-Me</title>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <header>
+        <img src="img/layout/logo.png" />
+        <h1>Guess Who</h1>
+    </header>
+
+    <div class="modal">
+        <h2></h2>
+        <h3></h3>
+        <button class="btn btn-save-game">Save my Tree</button>
+        <button class="btn btn-dont-save-game">Dont save it</button>
+    </div>
+
+    <main>
+        <section class="game-start">
+            <h2>Think of Someone...</h2>
+            <label for="userName">Just a sec :</label>
+            <input class="user-name-input" type="txt" id="userName" placeholder="Whats your name??" />
+            <button class="btn btn-start">I'm Ready!</button>
+        </section>
+
+        <section class="quest" style="display: none">
+            <h2></h2>
+            <button class="btn btn-yes">Yes</button>
+            <button class="btn btn-no">No</button>
+        </section>
+
+        <section class="new-quest" style="display: none">
+            <h2>OK, I gave up...</h2>
+
+            <form class="ending-form">
+                <label for="newGuess">You thought of: </label>
+                <input name="newGuess" type="txt" id="newGuess" placeholder="Your Guess" required />
+
+                <label for="newQuest">Question to differentiate:</label>
+                <input name="newQuest" type="txt" id="newQuest" placeholder="The answer is YES for yours" required />
+
+                <button type="submit" class="btn btn-add-guess">Make me Smarter!</button>
+            </form>
+            <button class="btn quit-game-btn">I had enogh</button>
+
+        </section>
+    </main>
+
+    <footer>CoffeRights &copy; 2021</footer>
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/quest-service.js"></script>
+    <script src="js/quest-controller.js"></script>
+</body>
+
+</html>
